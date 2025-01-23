@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= user ? "Edit User" : "Add User" %>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>MongoDB CRUD Application</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/add">Add User</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h2 class="title">
+            <%= user ? "Edit User" : "Add User" %>
+        </h2>
+        <form method="POST" action="<%= user ? '/update/' + user._id : '/create' %>" class="form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="<%= user ? user.name : '' %>" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" value="<%= user ? user.age : '' %>" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<%= user ? user.email : '' %>" required>
+            </div>
+            <button type="submit" class="btn primary">
+                <%= user ? "Update" : "Add" %> User
+            </button>
+        </form>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your App. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
