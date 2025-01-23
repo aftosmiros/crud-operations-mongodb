@@ -101,16 +101,6 @@ mongodb-crud-app/
 
 ---
 
-## Screenshots
-
-### Users List
-![Users List](https://via.placeholder.com/1200x600?text=Screenshot+of+Users+List)
-
-### Add/Edit User Form
-![Add/Edit User](https://via.placeholder.com/1200x600?text=Screenshot+of+Add+User+Form)
-
----
-
 ## Future Enhancements
 - **Pagination**: Break large datasets into pages for easier navigation.
 - **Charts**: Visualize user data using graphs.
